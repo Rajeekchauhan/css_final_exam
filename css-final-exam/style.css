@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+         display: flex;
+         height: 100vh;
+         background-color: #f5f5f5;
+     }
+     .left-side {
+         width: 25%;
+         background-color: #f0f0f0;
+         padding: 20px;
+         box-sizing: border-box;
+         border-top-left-radius: 20px;
+         border-bottom-left-radius: 20px;
+     }
+     .left-side .profile {
+         display: flex;
+         align-items: center;
+         margin-bottom: 20px;
+     }
+     .left-side .profile img {
+         border-radius: 50%;
+         width: 50px;
+         height: 50px;
+         margin-right: 10px;
+     }
+     .left-side .profile .name {
+         font-weight: bold;
+     }
+     .left-side .profile .status {
+         color: gray;
+     }
+     .left-side .search {
+         margin-bottom: 20px;
+     }
+     .left-side .search input {
+         width: 100%;
+         padding: 10px;
+         border-radius: 20px;
+         border: 1px solid #ccc;
+     }
+     .left-side .contacts {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+     }
+     .left-side .contacts li {
+         display: flex;
+         align-items: center;
+         padding: 10px 0;
+         border-bottom: 1px solid #ccc;
+     }
+     .left-side .contacts li img {
+         border-radius: 50%;
+         width: 40px;
+         height: 40px;
+         margin-right: 10px;
+     }
+     .left-side .contacts li .contact-info {
+         flex-grow: 1;
+     }
+     .left-side .contacts li .contact-info .name {
+         font-weight: bold;
+     }
+     .left-side .contacts li .contact-info .message {
+         color: gray;
+     }
+     .left-side .contacts li .time {
+         color: gray;
+         font-size: 12px;
+         margin-right: 10px;
+     }
+     .left-side .contacts li .unread {
+         background-color: #007bff;
+         color: white;
+         border-radius: 50%;
+         width: 20px;
+         height: 20px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 12px;
+     }
+
+     .left-side .contacts li:hover{
+        border: 1px solid blue;
+        border-radius: 15px;
+        padding: 10px;
+     }
+
+
+     .chat {
+         width: 50%;
+         display: flex;
+         flex-direction: column;
+         border-left: 1px solid #ccc;
+         border-right: 1px solid #ccc;
+     }
+     .chat .header {
+         display: flex;
+         align-items: center;
+         padding: 20px;
+         border-bottom: 1px solid #ccc;
+     }
+     .chat .header img {
+         border-radius: 50%;
+         width: 50px;
+         height: 50px;
+         margin-right: 10px;
+     }
+     .chat .header .name {
+         font-weight: bold;
+         flex-grow: 1;
+     }
+     .chat .header .status {
+         color: green;
+         margin-left: 7px;
+     }
+     .chat .header .icons {
+         display: flex;
+         align-items: center;
+     }
+     .chat .header .icons i {
+         margin-left: 10px;
+         color: gray;
+     }
+     .chat .messages {
+         flex-grow: 1;
+         padding: 20px;
+         overflow-y: auto;
+     }
+     .chat .messages .message {
+         display: flex;
+         margin-bottom: 20px;
+     }
+     .chat .messages .message img {
+         border-radius: 50%;
+         width: 40px;
+         height: 40px;
+         margin-right: 10px;
+     }
+     .chat .messages .message .text {
+         background-color: #e0e0e0;
+         padding: 10px;
+         border-radius: 10px;
+         max-width: 60%;
+     }
+     .chat .messages .message.sent .text {
+         background-color: #007bff;
+         color: white;
+         margin-left: auto;
+     }
+     .chat .messages .message.sent img {
+         order: 2;
+         margin-left: 10px;
+         margin-right: 0;
+     }
+     .chat .messages .message .file {
+         display: flex;
+         align-items: center;
+         background-color: #e0e0e0;
+         padding: 10px;
+         border-radius: 10px;
+         max-width: 60%;
+     }
+     .chat .messages .message .file img {
+         width: 50px;
+         height: 50px;
+         margin-right: 10px;
+     }
+     .chat .messages .message .file .filename {
+         font-weight: bold;
+     }
+     .chat .input {
+         display: flex;
+         align-items: center;
+         padding: 20px;
+         border-top: 1px solid #ccc;
+         background-color: #f0f0f0;
+     }
+     .chat .input input {
+         flex-grow: 1;
+         padding: 10px;
+         border-radius: 20px;
+         border: 1px solid #ccc;
+         margin-right: 10px;
+     }
+     .chat .input i {
+         color: gray;
+         margin-right: 10px;
+     }
+     .chat .input .send {
+         background-color: #007bff;
+         color: white;
+         padding: 10px;
+         border-radius: 50%;
+     }
+     .details {
+         width: 25%;
+         padding: 20px;
+         box-sizing: border-box;
+         border-top-right-radius: 20px;
+         border-bottom-right-radius: 20px;
+     }
+     .details .profile {
+         display: flex;
+         align-items: center;
+         margin-bottom: 20px;
+     }
+     .details .profile img {
+         border-radius: 50%;
+         width: 100px;
+         height: 100px;
+         margin-right: 10px;
+     }
+     .details .profile .name {
+         font-weight: bold;
+         font-size: 20px;
+     }
+     .details .profile .status {
+         color: gray;
+     }
+     .details .actions {
+         display: flex;
+         justify-content: space-around;
+         margin-bottom: 20px;
+     }
+     .details .actions .action {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         color: #007bff;
+     }
+     .details .actions .action i {
+         font-size: 24px;
+         margin-bottom: 5px;
+     }
+     .details .attachments {
+         margin-bottom: 20px;
+         margin-top: 25px;
+        display: flex;
+     }
+     .details .attachments .attachment {
+         display: flex;
+         align-items: center;
+         margin-bottom: 10px;
+
+     }
+     .details .attachments .attachment i {
+         font-size: 24px;
+         margin-right: 10px;
+         color: #007bff;
+     }
+     .details .attachments .attachment .filename {
+         font-weight: bold;
+     }
+     .details .attachments .view-all {
+         text-align: center;
+         color: #007bff;
+         cursor: pointer;
+         text-align: center;
+     }
+    
